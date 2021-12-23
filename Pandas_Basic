@@ -1,0 +1,7 @@
+pip install pandas
+import pandas as pd
+stockdata = pd.read_excel(r'C:\Users\rathpra2\Desktop\AAPL.xlsx')
+stockdata
+#View first and last 10 values 
+stockdata.head(10)
+stockdata.tail(10)
