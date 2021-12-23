@@ -20,3 +20,10 @@ stockdata['Volume'].mean()
 #Now compare this result after fill all NA with zero
 stockdata.fillna(0, inplace=True)
 stockdata['Volume'].mean()
+
+#Creating Own Dataframe without Excel 
+stockdata = {
+    'Day':['Day1','Day2','Day3'],'Open':[10,15,20],'Close':[11,14,18] 
+}
+data =pd.DataFrame(stockdata)
+data
