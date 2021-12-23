@@ -9,3 +9,7 @@ stockdata.tail(10)
 stockdata['Open']
 #Getting perticular values from a single column within the dataframe
 stockdata['Open'][4]
+#Basic Operations on Column Data
+stockdata['Open'].max()
+stockdata['Close'].min()
+stockdata['Adj Close'].mean()
