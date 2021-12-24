@@ -5,10 +5,28 @@ stockdata
 #View first and last 10 values 
 stockdata.head(10)
 stockdata.tail(10)
+
+#Getting all column header
+stockdata.columns
+
+#To get only selected columns 
+stockdata[['Date','Open']]
+
+#Getting only Selected Rows and Column
+stockdata[2:5]
+
 #Getting values from a single column within the dataframe DataFrame_Name['Column_Name'] 
 stockdata['Open']
+#Or This can be also done as 
+stockdata.Open
+stockdata.Open[2]
+
+
+
 #Getting perticular values from a single column within the dataframe
 stockdata['Open'][4]
+
+
 #Basic Operations on Column Data
 stockdata['Open'].max()
 stockdata['Close'].min()
