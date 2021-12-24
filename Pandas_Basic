@@ -33,8 +33,13 @@ or stockdata.Open.max()
 
 stockdata['Close'].min()
 stockdata['Adj Close'].mean()
+
+
 #Conditional serch using data from two columns 
 stockdata['Date'][stockdata['Open'] > 131.00]
+
+
+
 #Data Wrangling to fill NA with some value. 
 stockdata['Volume'].mean()
 #Now compare this result after fill all NA with zero
@@ -61,5 +66,11 @@ stockdata.Open.std()
 stockdata.describe()
 stockdata.Open.describe()
 
+#Arithmetic Operations on all the values within the coulmn
+stockdata.Open + 1
+stockdata.Open -1
+stockdata.Open * 2 
+stockdata.Open / 2
 
-
+#Conditionally finding data in dataframe
+stockdata[stockdata.Open < 120]
