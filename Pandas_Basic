@@ -29,6 +29,8 @@ stockdata['Open'][4]
 
 #Basic Operations on Column Data
 stockdata['Open'].max()
+or stockdata.Open.max()
+
 stockdata['Close'].min()
 stockdata['Adj Close'].mean()
 #Conditional serch using data from two columns 
@@ -45,3 +47,19 @@ stockdata = {
 }
 data =pd.DataFrame(stockdata)
 data
+##############################################################################################################################
+
+#Operations on dataframe
+
+#Basic Operations
+stockdata.Open.max()
+stockdata.Open.min()
+stockdata.Open.mean()
+stockdata.Open.std()
+
+#All in ope summary Stat
+stockdata.describe()
+stockdata.Open.describe()
+
+
+
