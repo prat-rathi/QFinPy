@@ -74,3 +74,16 @@ stockdata.Open / 2
 
 #Conditionally finding data in dataframe
 stockdata[stockdata.Open < 120]
+
+# Changing the index 
+stockdata.index
+stockdata.set_index('Date')
+#If sometime tometimes this dosent work use the below 
+stockdata.set_index('Date', inplace=True )
+
+#Reset Index
+stockdata.reset_index(inplace=True)
+
+
+
+
