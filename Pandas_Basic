@@ -80,6 +80,7 @@ stockdata.index
 stockdata.set_index('Date')
 #If sometime tometimes this dosent work use the below 
 stockdata.set_index('Date', inplace=True )
+stockdata.loc['2021-11-22']
 
 #Reset Index
 stockdata.reset_index(inplace=True)
