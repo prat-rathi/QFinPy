@@ -1,0 +1,40 @@
+#Skiping Rows in Excel file while reading using PD
+
+import pandas as pd
+stockdata = pd.read_excel(r'C:\Users\rathpra2\Desktop\PR\AAPL.xlsx')
+stockdata
+
+
+import pandas as pd
+stockdata = pd.read_excel(r'C:\Users\rathpra2\Desktop\PR\AAPL.xlsx', skiprows=1)
+stockdata
+
+#Specifying your own header / replacing existing header
+
+import pandas as pd
+stockdata = pd.read_excel(r'C:\Users\rathpra2\Desktop\PR\AAPL.xlsx', skiprows=1, header=None, names=['DATE','OPEN','HIGH','LOW','CLOSE','ADJ.CLOSE','VOL'])
+stockdata
+
+#Limiting the number of lines that ned to read from the excel file
+
+import pandas as pd
+stockdata = pd.read_excel(r'C:\Users\rathpra2\Desktop\PR\AAPL.xlsx', nrows=3)
+stockdata
+
+#Data Claening - Reeplacing Not Available and n.a. to Standard NaN.
+import pandas as pd
+stockdata = pd.read_excel(r'C:\Users\rathpra2\Desktop\PR\AAPL.xlsx', na_values = ["not available","n.a."])
+stockdata
+
+#Data Cleaning - Value can be negative in some cloumns but not in others/ Selecting an replacing values in the cells individually
+(Below code replaces the full column as zero)
+
+import pandas as pd
+stockdata = pd.read_excel(r'C:\Users\rathpra2\Desktop\PR\AAPL.xlsx')
+stockdata[stockdata.Open < 0.00] = 0.00
+stockdata
+
+#Saving your new DF to a new CSV or excel file without index 
+
+stockdata.to_csv("newPR.csv", index=False)
+
